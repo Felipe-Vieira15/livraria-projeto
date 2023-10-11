@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { View, StyleSheet, Text } from "react-native";
 
 const styles = StyleSheet.create({
@@ -20,7 +19,7 @@ const styles = StyleSheet.create({
 export default function Header({title}) {
 
     return (
-        <View style={{backgroundColor: CorBateria()}}>
+        <View>
             <Text style={styles.headerTextStyle}>
                 {title}
             </Text>
