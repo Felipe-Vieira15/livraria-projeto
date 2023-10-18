@@ -1,14 +1,20 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Login from '../screens/Login';
+import * as React from 'react';
 
-export default function RoutesRoot() {
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
+import HomeScreen from './screens/HomeScreen';
+import Login from './screens/Login';
+
+const Stack = createStackNavigator();
+
+export default function RootNavigation(){
     return(
-        <BrowserRouter>
-            <Routes>
-                <Route element={<HomeScreen/>} path="/">
-                    <Route element={<Login/>} path="/"/>
-                </Route>
-            </Routes>
-        </BrowserRouter>
+        <NavigationContainer>
+            <Stack.Navigator>
+                <Stack.Screen name='HomeScreen' component={HomeScreen} options={{headerShown: true}} />
+                <Stack.Screen name='Login' component={Login} options={{headerShown: true}} />
+            </Stack.Navigator>
+        </NavigationContainer>
     )
 }
