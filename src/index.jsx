@@ -16,7 +16,7 @@ export default function RootNavigation(){
         <NavigationContainer>
             <Stack.Navigator>
                 <Stack.Screen name='HomeScreen' component={HomeScreen} options={{headerShown: true}} />
-                <Stack.Screen name='Login' component={Login} options={{headerShown: true}} />
+                <Stack.Screen name='Login' component={Login} options={{headerShown: false}} />
                 <Stack.Screen name='DelProduto' component={DelProduto} options={{headerShown: true}} />
                 <Stack.Screen name='AppAdmin' component={AppAdmin} options={{headerShown: true}} />
                 <Stack.Screen name='PainelAdmin' component={PainelAdmin} options={{headerShown: true}} />

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import Header from '../components/Header';
 
 export default function App({navigation}) {
   const [username, setUsername] = useState('');
@@ -12,27 +13,36 @@ export default function App({navigation}) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.logo}>Meu App</Text>
+      <Text style={styles.logo}>Login</Text>
       <View style={styles.inputView}>
         <TextInput
           style={styles.inputText}
           placeholder="Usuário..."
-          placeholderTextColor="#003f5c"
+          placeholderTextColor="#01283b"
           onChangeText={(text) => setUsername(text)}
         />
+
+      <View>
+        <Header/>
+      </View>
+
       </View>
       <View style={styles.inputView}>
         <TextInput
           secureTextEntry
           style={styles.inputText}
           placeholder="Senha..."
-          placeholderTextColor="#003f5c"
+          placeholderTextColor="#01283b"
           onChangeText={(text) => setPassword(text)}
         />
       </View>
       <TouchableOpacity style={styles.loginBtn} onPress={handleLogin}>
         <Text style={styles.loginText}>Entrar</Text>
       </TouchableOpacity>
+      <View style={styles.recuperar}>
+              <Text style={styles.recuperar} onPress={() => {navigation.navigate('HomeScreen')}}>Recuperar Senha</Text>
+      <Text style={styles.recuperar} onPress={() => {navigation.navigate('HomeScreen')}}>Recuperar Senha</Text>
+      </View>
     </View>
   );
 }
@@ -47,8 +57,8 @@ const styles = StyleSheet.create({
     logo: {
       fontWeight: 'bold',
       fontSize: 50,
-      color: '#fb5b5a',
-      marginBottom: 40,
+      color: '#00c3ff',
+      marginBottom: 35,
     },
     inputView: {
       width: '80%',
@@ -65,7 +75,7 @@ const styles = StyleSheet.create({
     },
     loginBtn: {
       width: '80%',
-      backgroundColor: '#fb5b5a',
+      backgroundColor: '#00c3ff',
       borderRadius: 25,
       height: 50,
       alignItems: 'center',
@@ -75,5 +85,13 @@ const styles = StyleSheet.create({
     },
     loginText: {
       color: 'white',
+      fontSize: 20,
+      fontWeight: 'bold',
+    },
+    recuperar:{
+      color: 'white',
+      fontSize: 15,
+      fontWeight: 'bold',
+      display: 'flex',
     },
   });

@@ -1,5 +1,7 @@
 import { Button, Text, View } from "react-native";
 
+import Footer from "../components/Footer";
+
 
 export default function HomeScreen({navigation}) {
     return(
@@ -9,6 +11,11 @@ export default function HomeScreen({navigation}) {
             <Button title='DeletarProduto' onPress={() => navigation.navigate('DelProduto')} />
             <Button title='AppAdmin' onPress={() => navigation.navigate('AppAdmin')} />
             <Button title='PainelAdmin' onPress={() => navigation.navigate('PainelAdmin')} />
+            
+            <View>
+                <Footer />
+            </View>
+
         </View>
     )
 }

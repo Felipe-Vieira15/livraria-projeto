@@ -2,7 +2,7 @@ import { Button, View, StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
     footer: {
-        backgroundColor: '#606',
+        backgroundColor: '#fff',
         paddinghorizontal: 25,
         padding: 20,
     },
