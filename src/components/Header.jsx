@@ -1,4 +1,4 @@
-import { View, StyleSheet, Text } from "react-native";
+import { View, StyleSheet, Text, FontAwesomeIcon } from "react-native";
 
 const styles = StyleSheet.create({
     header: {
@@ -20,6 +20,7 @@ export default function Header({title}) {
 
     return (
         <View>
+            <FontAwesomeIcon icon="fa-solid fa-book-bookmark" />
             <Text style={styles.headerTextStyle}>
                 {title}
             </Text>

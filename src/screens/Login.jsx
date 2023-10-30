@@ -39,10 +39,28 @@ export default function App({navigation}) {
       <TouchableOpacity style={styles.loginBtn} onPress={handleLogin}>
         <Text style={styles.loginText}>Entrar</Text>
       </TouchableOpacity>
-      <View style={styles.recuperar}>
-              <Text style={styles.recuperar} onPress={() => {navigation.navigate('HomeScreen')}}>Recuperar Senha</Text>
-      <Text style={styles.recuperar} onPress={() => {navigation.navigate('HomeScreen')}}>Recuperar Senha</Text>
+      
+      <View style={{
+        flex: 1,
+        width: '100%',
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+      }}>
+        <View>
+          <Text style={{
+            color: 'white',
+            fontWeight: 'bold'
+          }} onPress={() => {navigation.navigate('HomeScreen')}}>Recuperar Senha</Text>
+        </View>
+
+        <View>
+          <Text style={{
+            color: 'white',
+            fontWeight: 'bold'
+          }} onPress={() => {navigation.navigate('Cadastro')}}>Cadastrar-se</Text>
+        </View>
       </View>
+
     </View>
   );
 }
@@ -53,6 +71,7 @@ const styles = StyleSheet.create({
       backgroundColor: '#003f5c',
       alignItems: 'center',
       justifyContent: 'center',
+      paddingTop: 200,
     },
     logo: {
       fontWeight: 'bold',
@@ -67,7 +86,7 @@ const styles = StyleSheet.create({
       height: 50,
       marginBottom: 20,
       justifyContent: 'center',
-      padding: 20,
+      padding: 25,
     },
     inputText: {
       height: 50,
@@ -80,18 +99,12 @@ const styles = StyleSheet.create({
       height: 50,
       alignItems: 'center',
       justifyContent: 'center',
-      marginTop: 40,
+      marginTop: 10,
       marginBottom: 10,
     },
     loginText: {
       color: 'white',
       fontSize: 20,
       fontWeight: 'bold',
-    },
-    recuperar:{
-      color: 'white',
-      fontSize: 15,
-      fontWeight: 'bold',
-      display: 'flex',
     },
   });
