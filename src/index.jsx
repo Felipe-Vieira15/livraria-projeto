@@ -26,6 +26,3 @@ export default function RootNavigation(){
         </NavigationContainer>
     )
 }
-
-
-// import React from 'react';
