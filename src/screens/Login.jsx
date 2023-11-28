@@ -45,14 +45,14 @@ export default function App({navigation}) {
           <Text style={{
             color: 'white',
             fontWeight: 'bold'
-          }} onPress={() => {navigation.navigate('HomeScreen')}}>Recuperar Senha</Text>
+          }} onPress={() => {navigation.navigate('RecSenha')}}>Recuperar Senha</Text>
         </View>
 
         <View>
           <Text style={{
             color: 'white',
             fontWeight: 'bold'
-          }} onPress={() => {navigation.navigate('Cadastro')}}>Cadastrar-se</Text>
+          }} onPress={() => {navigation.navigate('HomeScreen')}}>Cadastrar-se</Text>
         </View>
       </View>
 

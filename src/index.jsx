@@ -8,7 +8,7 @@ import HomeScreen from './screens/HomeScreen';
 import DelProduto from './screens/DelProduto';
 import AppAdmin from './screens/AppAdmin';
 import PainelAdmin from './screens/PainelAdmin';
-import PasswordRecoveryScreen from './screens/PasswordRecoveryScreen';
+import RecSenha from './screens/RecSenha';
 
 const Stack = createStackNavigator();
 
@@ -21,8 +21,7 @@ export default function RootNavigation(){
                 <Stack.Screen name='DelProduto' component={DelProduto} options={{headerShown: true}} />
                 <Stack.Screen name='AppAdmin' component={AppAdmin} options={{headerShown: true}} />
                 <Stack.Screen name='PainelAdmin' component={PainelAdmin} options={{headerShown: true}} />
-                <Stack.Screen name='PasswordRecovery' component={PasswordRecoveryScreen} options={{headerShown: true}} />
-
+                <Stack.Screen name='RecSenha' component={RecSenha} options={{headerShown: true}} />
             </Stack.Navigator>
         </NavigationContainer>
     )

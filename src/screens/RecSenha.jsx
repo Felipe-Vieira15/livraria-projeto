@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { View, Text, TextInput, Button } from 'react-native';
 
-const PasswordRecoveryScreen = () => {
+const RecSenha = () => {
   const [email, setEmail] = useState('');
 
   const handleRecovery = () => {
@@ -9,17 +10,17 @@ const PasswordRecoveryScreen = () => {
   };
 
   return (
-    <div className="container">
-      <h1>Recuperação de Senha</h1>
-      <input
+    <View className="container">
+      <Text>Recuperação de Senha</Text>
+      <TextInput
         type="email"
         placeholder="Digite seu e-mail"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
-      <button onClick={handleRecovery}>Recuperar Senha</button>
-    </div>
+      <Button title='Recuperar senha' onClick={handleRecovery}></Button>
+    </View>
   );
 };
 
-export default PasswordRecoveryScreen;
+export default RecSenha;
