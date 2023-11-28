@@ -12,7 +12,6 @@ export default function HomeScreen({navigation}) {
             <Button title='AppAdmin' onPress={() => navigation.navigate('AppAdmin')} />
             <Button title='PainelAdmin' onPress={() => navigation.navigate('PainelAdmin')} />
             <Button title='Recuperar Senha' onPress={() => navigation.navigate('RecSenha')} />
-            
             <View>
                 <Footer />
             </View>

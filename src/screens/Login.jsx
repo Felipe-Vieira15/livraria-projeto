@@ -32,7 +32,7 @@ export default function App({navigation}) {
         />
       </View>
       <TouchableOpacity style={styles.loginBtn} onPress={handleLogin}>
-        <Text style={styles.loginText}>Entrar</Text>
+        <Text styTouchableOpacityle={styles.loginText}>Entrar</Text>
       </TouchableOpacity>
       
       <View style={{
@@ -55,7 +55,6 @@ export default function App({navigation}) {
           }} onPress={() => {navigation.navigate('HomeScreen')}}>Cadastrar-se</Text>
         </View>
       </View>
-
     </View>
   );
 }
