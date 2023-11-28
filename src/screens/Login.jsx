@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
-import Header from '../components/Header';
 
 export default function App({navigation}) {
   const [username, setUsername] = useState('');
@@ -18,13 +17,9 @@ export default function App({navigation}) {
         <TextInput
           style={styles.inputText}
           placeholder="Usuário..."
-          placeholderTextColor="#01283b"
+          placeholderTextColor="#011824"
           onChangeText={(text) => setUsername(text)}
         />
-
-      <View>
-        <Header/>
-      </View>
 
       </View>
       <View style={styles.inputView}>
@@ -32,7 +27,7 @@ export default function App({navigation}) {
           secureTextEntry
           style={styles.inputText}
           placeholder="Senha..."
-          placeholderTextColor="#01283b"
+          placeholderTextColor="#011824"
           onChangeText={(text) => setPassword(text)}
         />
       </View>
